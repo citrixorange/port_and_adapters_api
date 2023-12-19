@@ -34,3 +34,14 @@ impl FromStr for Category {
     }
 }
 
+pub trait IItem {
+    fn set_name(&mut self, name: String);
+    fn set_description(&mut self, description: String);
+    fn set_category(&mut self, category: Category);
+    fn set_price(&mut self, price: String);
+    fn get_name(&self) -> String;
+    fn get_description(&self) -> String;
+    fn get_category(&self) -> Category;
+    fn get_price(&self) -> String;
+}
+
